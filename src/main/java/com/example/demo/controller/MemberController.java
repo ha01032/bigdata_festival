@@ -38,8 +38,13 @@ public class MemberController {
     
     
     @PostMapping("/signup")
-    public MemberDto signup(@RequestBody final MemberDto member) {
-        return memberService.findMember(member);
+    public String signup(@RequestBody final MemberDto member) {
+        int check = memberService.insertMember(member);
+        String checking = "fail";
+        if (check == 1) {
+        	checking = "success";
+        }
+        return checking;
     }
 	
 	

@@ -30,5 +30,16 @@ public class MemberService {
     public MemberDto findMember(final MemberRequestDto member){
         return memberMapper.findMember(member);
     }
+    
+    public int insertMember(final MemberDto member) {
+    	try {
+    		return memberMapper.insertMember(member);
+    		}
+    	catch (Exception e) {
+
+            return 0;
+        }
+
+    }
 
 }
