@@ -35,7 +35,12 @@ public class MemberController {
     public MemberDto login(@RequestBody final MemberRequestDto member) {
         return memberService.findMember(member);
     }
-
+    
+    
+    @PostMapping("/signup")
+    public MemberDto signup(@RequestBody final MemberDto member) {
+        return memberService.findMember(member);
+    }
 	
 	
 	

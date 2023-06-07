@@ -10,9 +10,10 @@
   		SELECT * FROM member
   		WHERE email = #{email} and passwd = #{passwd}
   	</select>
-  
- 
-  
- 
+  	
+  	<insert id="insertMember" parameterType="com.example.demo.vo.MemberDto">
+  		INSERT INTO users (email, passwd, name)
+  		VALUES (#{email}, #{passwd}, #{name})
+  	</insert>
   
   </mapper>

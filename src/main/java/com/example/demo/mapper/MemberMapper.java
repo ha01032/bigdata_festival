@@ -10,4 +10,6 @@ import com.example.demo.vo.MemberRequestDto;
 public interface MemberMapper {
 	
 	MemberDto findMember(MemberRequestDto member);
+	
+	int insertMember(MemberDto member);
 }
